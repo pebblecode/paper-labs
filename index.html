@@ -1,88 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-
-  <title>pebblecode/paper-labs @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #00b108;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
+  <meta charset="utf-8">
+  <title>paper-labs</title>  
+  
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="javascript/paper.js" type="text/javascript"></script>
+  <script src="javascript/script.js" type="text/javascript"></script>
+  
+  <script type="text/paperscript" canvas="the-lab">
+    
+    var x = 0;
+    var y = 0;
+    var r = 40;
+    var hue = 0;
+    
+    for (var c=0; c<21; c++){
+      for (var i=0; i<21; i++){
+        myCircle = new Path.Circle(new Point(x, y), (Math.random()*35));
+        myCircle.fillColor = "hsl("+ hue + ",100%,50%)";
+        x = x+20;
+        hue = (Math.random()*120)+320;
+        myCircle.opacity =0.8 ;
+        //myCircle.blendMode = 'average';
+      }  
+      
+      y= y+20;
+      x= 0;
+      r = r -2;   
     }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #ff4ef7; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #ff4ef7; }
-    h3 { text-align: center; color: #ff4ef7; }
-    a { color: #ff4ef7; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
+    
+    
+    blueCircle = new Path.Circle(new Point(200, 200), 60);
+    blueCircle.strokeColor = "hsl("+ ((Math.random()*120)+100) + ",100%,70%)";
+    blueCircle.strokeWidth = 40; 
+    blueCircle.blendMode = 'multiply';
+    
+    blueCircle = new Path.Circle(new Point(200, 200), 90);
+    blueCircle.strokeColor = "hsl("+ ((Math.random()*120)+100) + ",100%,70%)";
+    blueCircle.strokeWidth = 5; 
+    blueCircle.blendMode = 'multiply';
+    
+    
+  </script>
+  
+  </head>
 <body>
-  <a href="https://github.com/pebblecode/paper-labs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/pebblecode/paper-labs/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/pebblecode/paper-labs/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/pebblecode/paper-labs">paper-labs</a>
-      <span class="small">by <a href="https://github.com/pebblecode">pebblecode</a></span></h1>
-
-    <div class="description">
-      Mark's paper.js experiments 
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Mark Durrant (mark@pebblecode.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>pebble {code} (dev@pebbleit.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/pebblecode/paper-labs/zipball/master">zip</a> or
-      <a href="https://github.com/pebblecode/paper-labs/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/pebblecode/paper-labs</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/pebblecode/paper-labs">pebblecode/paper-labs</a>
-    </div>
-
+  <div id="text">
+    <h1>paper-lab one</h1>
+    <p>My <del>first</del> seventh attempt at making something pretty with <a href="http://paperjs.org/">paper.js
+    </a></p>
   </div>
-
+  <div id="wrap">
+    <canvas id="the-lab" width="400px" height="400px" ></canvas>
+  </div>
 </body>
 </html>

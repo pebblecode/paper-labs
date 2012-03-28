@@ -1,0 +1,9 @@
+.DS_Store
+.bundle
+tmp/**/*
+tmp/*.json
+.sass-cache
+vendor/bundle
+capybara-*.html
+log/*
+*.sublime*

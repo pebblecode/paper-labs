@@ -1,0 +1,52 @@
+@import "compass/reset";
+@import "compass/css3";
+
+body{
+  background-color: hsl(40, 30%, 95%);
+  font: normal 1em/1.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  color: hsl(360, 0%, 65%);
+}
+
+h1{
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: hsl(320, 100%, 50%);
+  margin-bottom: 5px;
+}
+
+a{
+  color: hsl(360, 0%, 65%);
+  &:hover{
+    color: hsl(320, 100%, 50%);
+  }
+}
+
+#text{
+  //background: hsla(320, 100%, 50%, .25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  margin-top: 220px;
+  margin-left: -200px;
+}
+
+#wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px; 
+  margin-top: -210px;
+  margin-left: -210px;
+  background-color: hsl(360, 00%, 100%);
+  padding: 10px 11px 11px 10px;
+  border: 1px solid hsl(360, 00%, 80%);
+  @include box-shadow(hsla(0, 0%, 0%, 0.15) 0 1px 5px);
+}
+
+#the-lab{
+  background-color: hsl(0, 0%, 97%);
+  border: 1px solid hsl(360, 00%, 90%);
+}

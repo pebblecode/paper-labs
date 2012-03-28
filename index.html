@@ -12,36 +12,13 @@
   
   <script type="text/paperscript" canvas="the-lab">
     
-    var x = 0;
-    var y = 0;
-    var r = 40;
-    var hue = 0;
-    
-    for (var c=0; c<21; c++){
-      for (var i=0; i<21; i++){
-        myCircle = new Path.Circle(new Point(x, y), (Math.random()*35));
-        myCircle.fillColor = "hsl("+ hue + ",100%,50%)";
-        x = x+20;
-        hue = (Math.random()*120)+320;
-        myCircle.opacity =0.8 ;
-        //myCircle.blendMode = 'average';
-      }  
-      
-      y= y+20;
-      x= 0;
-      r = r -2;   
-    }
-    
-    
     blueCircle = new Path.Circle(new Point(200, 200), 60);
     blueCircle.strokeColor = "hsl("+ ((Math.random()*120)+100) + ",100%,70%)";
     blueCircle.strokeWidth = 40; 
-    blueCircle.blendMode = 'multiply';
     
     blueCircle = new Path.Circle(new Point(200, 200), 90);
     blueCircle.strokeColor = "hsl("+ ((Math.random()*120)+100) + ",100%,70%)";
     blueCircle.strokeWidth = 5; 
-    blueCircle.blendMode = 'multiply';
     
     
   </script>
@@ -51,8 +28,9 @@
 
   <div id="text">
     <h1>paper-lab one</h1>
-    <p>My <del>first</del> seventh attempt at making something pretty with <a href="http://paperjs.org/">paper.js
-    </a></p>
+    <p>My <del>first</del> seventh attempt at making something pretty with <a href="http://paperjs.org/">paper.js</a></p>
+    <br />
+    <a href="paper-lab-1.html">Go to lab one</a>
   </div>
   <div id="wrap">
     <canvas id="the-lab" width="400px" height="400px" ></canvas>

@@ -9,7 +9,5 @@ If your fairly comfortable with javascript I'm sure a lot of my code will seam p
 Like to say thanks to the people behinds the mind-bendingly awesome guys behind [paper.js](http://paperjs.org/). As well as my very helpful colleagues at [pebble {code}](http://pebblecode.com/)
 
 Mark Durrant
-
 UX/UI designer
-
 pebble {code}
